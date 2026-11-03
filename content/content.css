@@ -1,0 +1,404 @@
+/* InstaClean & FBClean v2.1 — Namespaced On-Page Styles */
+
+.instaclean-target-highlight {
+  outline: 2px solid #e1306c !important;
+  outline-offset: -2px !important;
+  background-color: rgba(225, 48, 108, 0.08) !important;
+  transition: outline 0.2s ease, background-color 0.2s ease !important;
+}
+
+/* On-Page Visual Chat Protection Toggle on Inbox Thread Rows */
+.instaclean-row-protected {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  box-shadow: inset 4px 0 0 #10b981 !important;
+}
+
+.instaclean-row-toggle {
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border-radius: 999px !important;
+  padding: 4px 9px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease !important;
+  background: rgba(24, 24, 27, 0.92) !important;
+  color: #f4f4f5 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+
+.instaclean-row-toggle:hover {
+  border-color: #10b981 !important;
+  background: rgba(39, 39, 42, 0.98) !important;
+}
+
+.instaclean-row-toggle.instaclean-is-kept {
+  background: #059669 !important;
+  border-color: #34d399 !important;
+  color: #ffffff !important;
+}
+
+#instaclean-floating-root {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 2147483640;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #f5f5f5;
+  user-select: none;
+}
+
+.instaclean-widget {
+  width: 345px;
+  background: linear-gradient(160deg, #18181b 0%, #121215 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(225, 48, 108, 0.22);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.instaclean-widget.instaclean-minimized .instaclean-body {
+  display: none;
+}
+
+.instaclean-widget.instaclean-minimized {
+  width: auto;
+  border-radius: 999px;
+}
+
+.instaclean-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 0.28), rgba(253, 29, 29, 0.22), rgba(252, 176, 69, 0.2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  gap: 10px;
+}
+
+.instaclean-widget.instaclean-minimized .instaclean-header {
+  border-bottom: none;
+  padding: 8px 14px;
+}
+
+.instaclean-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.instaclean-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #71717a;
+  box-shadow: 0 0 0 2px rgba(113, 113, 122, 0.25);
+  flex-shrink: 0;
+}
+
+.instaclean-dot.instaclean-dot-running {
+  background: #e1306c;
+  box-shadow: 0 0 0 3px rgba(225, 48, 108, 0.35);
+  animation: instaclean-pulse 1.2s infinite ease-in-out;
+}
+
+.instaclean-dot.instaclean-dot-paused {
+  background: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.35);
+}
+
+@keyframes instaclean-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.75; }
+}
+
+.instaclean-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.instaclean-min-btn,
+.instaclean-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #e4e4e7;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.instaclean-min-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.instaclean-close-btn:hover {
+  background: rgba(239, 68, 68, 0.85);
+  color: #ffffff;
+}
+
+.instaclean-reopen-pill {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #18181b, #27272a);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 6px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.instaclean-reopen-pill:hover {
+  border-color: #e1306c;
+}
+
+.instaclean-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.instaclean-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.instaclean-stat-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 5px 8px;
+  text-align: center;
+}
+
+.instaclean-stat-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.instaclean-stat-lbl {
+  font-size: 9.5px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.instaclean-mode-select {
+  width: 100%;
+  background: #27272a;
+  color: #f4f4f5;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 12px;
+  outline: none;
+}
+
+/* Conversation Keep Manager Section inside Floating Panel */
+.instaclean-keep-box {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.instaclean-keep-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #6ee7b7;
+}
+
+.instaclean-keep-refresh {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #e4e4e7;
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-size: 10.5px;
+  cursor: pointer;
+}
+
+.instaclean-keep-refresh:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.instaclean-keep-input-row {
+  display: flex;
+  gap: 5px;
+}
+
+.instaclean-keep-input {
+  flex: 1;
+  background: #1f1f24;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  padding: 5px 8px;
+  font-size: 11.5px;
+  outline: none;
+}
+
+.instaclean-keep-input:focus {
+  border-color: #10b981;
+}
+
+.instaclean-keep-add-btn {
+  background: #059669;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.instaclean-keep-add-btn:hover {
+  background: #10b981;
+}
+
+.instaclean-keep-list {
+  max-height: 115px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-right: 2px;
+}
+
+.instaclean-keep-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 11.5px;
+  color: #e4e4e7;
+  cursor: pointer;
+}
+
+.instaclean-keep-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.instaclean-keep-item.instaclean-item-protected {
+  background: rgba(16, 185, 129, 0.18);
+  color: #a7f3d0;
+  font-weight: 600;
+}
+
+.instaclean-keep-item input[type="checkbox"] {
+  accent-color: #10b981;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.instaclean-keep-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.instaclean-keep-tag {
+  font-size: 9.5px;
+  padding: 1px 5px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #a1a1aa;
+}
+
+.instaclean-keep-item.instaclean-item-protected .instaclean-keep-tag {
+  background: #059669;
+  color: #ffffff;
+}
+
+.instaclean-status-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 11.5px;
+  color: #d4d4d8;
+  line-height: 1.35;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.instaclean-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.instaclean-btn {
+  flex: 1;
+  border: none;
+  border-radius: 9px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.instaclean-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.instaclean-btn-start {
+  background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+  color: #ffffff;
+}
+
+.instaclean-btn-pause {
+  background: #f59e0b;
+  color: #111114;
+}
+
+.instaclean-btn-stop {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.instaclean-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
