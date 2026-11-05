@@ -1,17 +1,28 @@
-# FBClean v2.0 — Facebook Messenger Chat Deleter (Chrome Extension)
+# FBClean — Facebook Messenger Chat Deleter (Chrome Extension)
 
-Yeh standalone Chrome Extension aapke **Facebook Messages (`facebook.com/messages/`)** aur **Messenger (`messenger.com`)** ki sabhi conversations ko automatically bulk mein delete karne ke liye ready hai — aur aapke chal rahe Instagram process ke saath **parallel** mein kaam karta hai!
-
-## ✨ Key Features
-1. **⚡ Fast 3-Dots Menu + Drawer Fallback**: Har chat row ke `...` menu se seedhe **`Delete chat` → `Delete`** karta hai (aur zaroorat padne par right-side Chat Info -> `Privacy & support` -> `Delete chat` use karta hai).
-2. **🛡️ On-Page Visual Chat Protection (`🛡️ Keep / 🗑️ Clean`)**: Har Facebook chat ke aage `🗑️ Clean` button dikhta hai — jis chat ko bachaana ho us par click karke `🛡️ Keep` kar dein.
-3. **🔄 Full Auto-Scroll**: Puri Facebook Messenger chat list ko niche tak scroll karke purani conversations bhi load aur delete karta hai.
-4. **⏸️ Pause / Resume & ⬇ Export Backup**: Kabhi bhi Pause/Resume karein aur deleted chats ki `.txt` backup file export karein.
+**FBClean** is a privacy-first Manifest V3 Chrome Extension that automatically deletes conversations in bulk on **Facebook Messages (`https://www.facebook.com/messages/`)** and **Messenger (`https://www.messenger.com/`)**.
 
 ---
 
-## 🚀 Chrome Mein Kaise Load Karein
-1. Chrome mein `chrome://extensions/` kholein (Developer mode ON rakhein).
-2. **Load unpacked** par click karein aur yeh folder select karein:
-   `/Users/shubhammehta/Downloads/instaextension/fbextension`
-3. Ek naye tab mein `https://www.facebook.com/messages/` open karein aur **▶ Delete All FB Chats** dabayein!
+## ✨ Key Features
+
+1. **⚡ Fast 3-Dots Row Menu Deletion + Info Drawer Fallback**:
+   - Automatically triggers the conversation menu (`...`) on each chat row in your Messenger sidebar and confirms deletion, with an automatic fallback to the right-side Conversation Information drawer.
+2. **🛡️ Keep Conversations Manager (Checklist + Row Badges)**:
+   - Tick any conversation inside the floating panel's **`🛡️ Keep Conversations`** checklist or type a contact name and click **`+ Keep`** to protect important chats from deletion.
+   - Each conversation row in the sidebar also displays a one-click **`🛡️ Keep` / `🗑️ Clean`** toggle badge.
+3. **🔄 Automatic Inbox Scrolling**:
+   - Automatically scrolls down your Facebook Messenger chat list to load and clean older conversations.
+4. **⏳ Smart Rate-Limit Protection**:
+   - Configurable action delays and automatic batch cooldowns after every 20 deletions to keep your account safe.
+5. **⏸️ Pause, Resume, Close (`✕`) & Export Backup**:
+   - Pause, resume, or stop at any time, minimize (`—`) or close (`✕`) the floating widget, and export a `.txt` backup log of all deleted conversations.
+
+---
+
+## 🚀 How to Install in Google Chrome
+
+1. Open `chrome://extensions/` in Google Chrome and enable **Developer mode** in the top-right corner.
+2. Click **Load unpacked** and select the `/Users/shubhammehta/Downloads/instaextension/fbextension` folder.
+3. Open `https://www.facebook.com/messages/` or `https://www.messenger.com/`.
+4. Select any chats you want to protect under **`🛡️ Keep Conversations`**, then click **▶ Delete All FB Chats**!
